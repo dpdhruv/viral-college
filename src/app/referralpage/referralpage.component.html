@@ -1,0 +1,186 @@
+<app-loader  *ngIf="loader.showLoader" style="position:absolute;left:0;right:0;top:0;bottom:0;z-index:9999;"></app-loader>
+<div class="page-wrapper">
+  <app-navbar [whichPage]="showMenu" [Username]="userDetails.user.name"></app-navbar>
+  <div class="container-fluid grey_box">
+    <!--main heading-->
+    <div class="row">
+      <div class="col-sm-5 flex-container">
+        <div class="ambassador ">
+          <h1 class="heading">Become an <br>ambassador</h1>
+          <br>
+          <p class="refer_info">Refer more people and<br>score more cool stuff.</p>
+        </div>
+      </div>
+      <!--inviation box-->
+      <div class="col-sm-7 ">
+        <div class="referral_share">
+          <div class="Invite_friend">
+            <p class="inviation">Invite your friends!</p>
+          </div>
+          <div class="icon">
+            <div class="row button-group">
+              <div class="col-sm-4">
+                <a href="https://twitter.com/share?text=Click on the link and get offers%0A&url=http://localhost:4200/SignUp/{{userDetails.user.referral_token}}"
+                  class="twitter-share-button" data-size="large" style="background:#1DA1F2;color:white" target="_blank"
+                  data-text="Share the link" data-url="https://www.sundaypyjamas.com" data-show-count="false"
+                  class="btn btn-success btn-block">
+                  <i class="fa fa-twitter"></i>&nbsp;
+                  Tweet
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a href=" " class="btn btn-block btn-whatsapp-desktop">
+                  <i class="fa fa-whatsapp"></i>
+                  Whatsapp
+                </a>
+              </div>
+            </div>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox desktop_button"></div>
+
+          </div>
+          <br>
+          <div class="form-group">
+            <input id="usr" type="text" name="username" class="form__input" placeholder="johndoe@limco.com" autofocus=""
+              value="{{'localhost:4200/SignUp/'+userDetails.user.referral_token}}"
+              style="display: block;width: 100%;" readonly>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--customer progress bar-->
+
+  <div class="container con">
+    <div class="row">
+      <!--coupen-->
+      <div class="col-sm-3">
+        <h6 class="heading_coupon">Coupons</h6>
+        <div class="coupon">
+          <h6 *ngIf="emptyCoupons">No coupons available</h6>
+          <ul *ngIf="!emptyCoupons">
+            <li *ngFor="let coupon of coupons" class="coupon-tile"><span></span>
+              <div>
+                <div class="title">{{coupon.coupon_id}}</div>
+                <div class="title">{{coupon.coupon_message}}</div>
+                <div class="title">Discount:{{coupon.coupon_value}}</div>
+                <div class="title">
+                 Status:
+                 <span class="badge" [ngClass]="{'badge-success':coupon.status==='active','badge-danger':coupon.status==='expired'}">
+                   {{coupon.status}}
+                 </span>
+                </div>
+                <div class="title">Valid Till:{{coupon.expiry_date | date:'mediumDate'}}</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <h6 class="heading_coupon2">Milestone</h6>
+        <!--milestone-->
+        <section class="cd-timeline js-cd-timeline">
+          <div class="cd-timeline__container">
+            <div *ngFor="let mile of milestone" class="cd-timeline__block js-cd-block">
+              <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+                <!--<img src="img/cd-icon-picture.svg" alt="Picture">-->
+              </div> <!-- cd-timeline__img -->
+
+              <div class="cd-timeline__content js-cd-content">
+                <h2>Available at {{mile.available_at}} Referrals</h2>
+                <p>Coupon Code:&nbsp;{{mile.code}}</p>
+                <p>Discount:&nbsp;{{mile.coupon_value}}</p>
+                <p>
+                  Status:&nbsp;
+                  <span class="badge" [ngClass]="{'badge-success':mile.status==='active','badge-danger':mile.status==='expired'}">
+                    {{mile.status}}
+                  </span>
+                </p>
+                <p>Valid Till:&nbsp;{{mile.expiry_date | date:'mediumDate'}}</p>
+                <!--<span class="cd-timeline__date">Jan 14</span>-->
+              </div> <!-- cd-timeline__content -->
+            </div> <!-- cd-timeline__block -->
+          </div>
+        </section> <!-- cd-timeline -->
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c6e3693a4d6732c"></script>
+
+  <script>
+    (function () {
+      // Vertical Timeline - by CodyHouse.co
+      function VerticalTimeline(element) {
+        this.element = element;
+        this.blocks = this.element.getElementsByClassName("js-cd-block");
+        this.images = this.element.getElementsByClassName("js-cd-img");
+        this.contents = this.element.getElementsByClassName("js-cd-content");
+        this.offset = 0.8;
+        this.hideBlocks();
+      };
+
+      VerticalTimeline.prototype.hideBlocks = function () {
+        //hide timeline blocks which are outside the viewport
+        if (!"classList" in document.documentElement) {
+          return;
+        }
+        var self = this;
+        for (var i = 0; i < this.blocks.length; i++) {
+          (function (i) {
+            if (self.blocks[i].getBoundingClientRect().top > window.innerHeight * self.offset) {
+              self.images[i].classList.add("cd-is-hidden");
+              self.contents[i].classList.add("cd-is-hidden");
+            }
+          })(i);
+        }
+      };
+
+      VerticalTimeline.prototype.showBlocks = function () {
+        if (! "classList" in document.documentElement) {
+          return;
+        }
+        var self = this;
+        for (var i = 0; i < this.blocks.length; i++) {
+          (function (i) {
+            if (self.contents[i].classList.contains("cd-is-hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight * self.offset) {
+              // add bounce-in animation
+              self.images[i].classList.add("cd-timeline__img--bounce-in");
+              self.contents[i].classList.add("cd-timeline__content--bounce-in");
+              self.images[i].classList.remove("cd-is-hidden");
+              self.contents[i].classList.remove("cd-is-hidden");
+            }
+          })(i);
+        }
+      };
+
+      var verticalTimelines = document.getElementsByClassName("js-cd-timeline"),
+        verticalTimelinesArray = [],
+        scrolling = false;
+      if (verticalTimelines.length > 0) {
+        for (var i = 0; i < verticalTimelines.length; i++) {
+          (function (i) {
+            verticalTimelinesArray.push(new VerticalTimeline(verticalTimelines[i]));
+          })(i);
+        }
+
+        //show timeline blocks on scrolling
+        window.addEventListener("scroll", function (event) {
+          if (!scrolling) {
+            scrolling = true;
+            (!window.requestAnimationFrame) ? setTimeout(checkTimelineScroll, 250) : window.requestAnimationFrame(checkTimelineScroll);
+          }
+        });
+      }
+
+      function checkTimelineScroll() {
+        verticalTimelinesArray.forEach(function (timeline) {
+          timeline.showBlocks();
+        });
+        scrolling = false;
+      };
+    })();
+
+  </script>

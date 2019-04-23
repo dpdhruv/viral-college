@@ -1,0 +1,52 @@
+<app-admin-loader *ngIf="loading" class="admin-loader"></app-admin-loader>
+<div class="analytics-container mx-auto">
+  <button (click)="showCharts=!showCharts" class="btn btn-primary">
+    Show Charts
+  </button>
+  &nbsp;
+  <button (click)="showCharts=!showCharts" class="btn btn-primary">
+    Show Numbers
+  </button>
+  <div *ngIf="!showCharts" class="analytics">
+    <div class="data-wrapper">
+      <h4 class="data-heading">Total Users</h4>
+      <div class="liner"></div>
+      <p class="data">{{analytics?analytics.Total_user:''}}</p>
+    </div>
+
+    <div class="data-wrapper">
+      <h4 class="data-heading">Total Refferals</h4>
+      <div class="liner"></div>
+      <p class="data">{{analytics?analytics.Total_Referrals:''}}</p>
+    </div>
+
+    <div class="data-wrapper">
+      <h4 class="data-heading">Total Coupons</h4>
+      <div class="liner"></div>
+      <p class="data">{{analytics?analytics.Total_coupons:''}}</p>
+    </div>
+
+    <div class="data-wrapper">
+      <h4 class="data-heading">Total Coupons Used</h4>
+      <div class="liner"></div>
+      <p class="data">{{analytics?analytics.Total_coupons_used_by_users:''}}</p>
+    </div>
+
+    <div class="data-wrapper">
+      <h4 class="data-heading">Total Coupons Created For Users</h4>
+      <div class="liner"></div>
+      <p class="data">{{analytics?analytics.Total_User_coupons:''}}</p>
+    </div>
+  </div>
+  <div *ngIf="showCharts" class="row p-4">
+    <div class="col-sm-6">
+          <canvas baseChart [data]="doughnutChartData" [colors]="donutColors" [labels]="doughnutChartLabels"
+            [chartType]="doughnutChartType"></canvas>
+    </div>
+    <div class="col-sm-6">
+          <canvas baseChart [data]="couponChartData" [colors]="donutColors" [labels]="couponChartLabels"
+            [chartType]="doughnutChartType"></canvas>
+    </div>
+  </div>
+</div>
+<!-- <ngx-spinner></ngx-spinner> -->

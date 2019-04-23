@@ -1,0 +1,36 @@
+.admin-loader {
+  position: absolute;
+  left: 327px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+}
+.liner{
+  border-top: 5px solid #cc3743;
+  width: 100px;
+  align-self: center;
+}
+
+.analytics-container{
+  width:80%;
+  padding:40px 0px;
+}
+
+.analytics{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.data-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left:3%;
+  margin-top:3%;
+}
+
+.data{
+  align-self: center;
+  font-size: 20px;
+}

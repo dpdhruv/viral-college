@@ -1,0 +1,358 @@
+html {
+  font-size: 16px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #cc3743;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.topnav a:hover {
+  background-color: #cc3743;
+  color: white;
+}
+
+.active {
+  background-color: #cc3743;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+}
+
+#complete-software {
+  font-size: 3rem;
+  font-weight: 1000;
+  color: white;
+  padding-bottom: 1.25rem;
+}
+
+#landing {
+  background: #cc3743;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: 1000;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  width: inherit;
+}
+
+.content-software-suite {
+  padding-top: 6.25rem;
+  background: #cc3743;
+}
+
+text {
+  color: white;
+  font-size: 3.1rem;
+  font-family: "Poppins";
+}
+
+.Technology-First {
+  color: white;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-bottom: 3.1rem;
+}
+
+.btn-service-slider {
+  color: #cc3743;
+  background: white;
+  padding: 0 3.75rem;
+  float: left;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 1.6rem;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  line-height: 2.4rem;
+  font-weight: 1000;
+  margin-left: 0.6rem;
+  margin-top: 4.4rem;
+}
+
+#SignUp {
+  color: #cc3743;
+  background: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  border-radius: 1.6rem;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  line-height: 2.4rem;
+  font-weight: 1000;
+}
+
+.content-DevOps1 {
+  /*border: 2px solid darkblue;*/
+  height: 31.25rem;
+}
+
+.content-DevOps2 {
+  /*border: 2px solid darkblue;*/
+  height: 31.25rem;
+}
+
+.content-DevOps3 {
+  /*border: 2px solid darkblue;*/
+  height: 31.25rem;
+}
+
+.Integrate-Text {
+  color: #cc3743;
+  font-size: 2.5rem;
+  font-family: "Poppins";
+  font-weight: 1000;
+
+  display: inline-block;
+}
+
+#Integrate-Text {
+  padding-top: 3.1rem;
+  padding-left: 1.6rem;
+}
+
+.Induce-Speed-text {
+  font-family: "Poppins";
+  font-size: 1.25rem;
+  color: rgb(48, 43, 43);
+  line-height: 1.5;
+}
+
+#DevOps {
+  color: #cc3743;
+  font-weight: 1000;
+}
+
+.section-text {
+  color: grey;
+}
+
+.spbtn {
+  padding: 0 1.25rem;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none !important;
+  border: 1px solid #fff !important;
+  border-radius: 1.56rem;
+  height: 2.5rem;
+  line-height: 2.4rem !important;
+  font-weight: 700;
+  color: white !important;
+  background-color: #cc3743;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.spbtnSignUp {
+  padding: 0 1.25rem;
+  display: inline-block;
+  text-transform: capitalize;
+  text-decoration: none !important;
+  border: 1px solid #fff !important;
+  border-radius: 1rem;
+  height: 2.5rem;
+  line-height: 2.5rem !important;
+  font-weight: 700;
+  color: #cc3743 !important;
+  background-color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+section {
+  height: 100vh;
+}
+
+.Integrate-Textright {
+  color: #cc3743;
+  font-size: 2.5rem;
+  font-family: "Poppins";
+  font-weight: 1000;
+  padding-left: 6.25rem;
+  display: inline-block;
+}
+
+.Induce-Speed-textright {
+  padding-left: 6.25rem;
+  color: gray;
+  line-height: 1.5;
+}
+
+.Get-Started {
+  font-size: 0.9rem;
+  height: 22rem;
+  width: 100%;
+  background: #cc3743;
+  margin-top: 0px;
+  padding-bottom: 6.25rem;
+  padding-top: 3.1rem;
+}
+
+.Our-services {
+  color: white;
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.get-started-section {
+  background-color: rgb(204, 55, 67);
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  height: 22rem;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  margin-top: 1.6rem;
+  padding-bottom: 5.2rem;
+  padding-top: 3.1rem;
+  text-size-adjust: 100%;
+}
+
+.btn-service-slider-get-started {
+  color: #cc3743;
+  background: white;
+  padding: 0 1.9rem;
+  text-align: left;
+
+  text-transform: capitalize;
+  text-decoration: none;
+
+  border-radius: 1.6rem;
+  font-size: 1.25rem;
+  height: 2.5rem;
+  line-height: 2.4rem;
+  font-weight: 1000;
+  margin-left: 5.6rem;
+  margin-top: 4.4rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  /*.content-software-suite
+    {
+        
+        
+}*/
+  #complete-software {
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    font-size: 2.5rem;
+  }
+  .Technology-First {
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    font-size: 1.9rem;
+  }
+
+  .content-DevOps1 {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    height: 37.5rem;
+    /*border: 2px solid darkblue;*/
+  }
+
+  .content-DevOps2 {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    height: 37.5rem;
+    /*border: 2px solid darkgoldenrod;*/
+  }
+
+  .content-DevOps3 {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    height: 37.5rem;
+    /*border: 2px solid darkgreen;*/
+  }
+
+  .Integrate-Text {
+    /*border: 2px solid darkblue;*/
+    font-size: 2.2rem;
+    padding-top: 5px;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .Induce-Speed-text {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    /*border: 2px solid darkblue;*/
+    padding-bottom: 1.25rem;
+  }
+
+  img {
+    width: inherit;
+  }
+
+  /*   .content-DevOps1
+    {
+        
+        
+    }
+*/
+  .Integrate-Textright {
+    align-self: center;
+    font-size: 1.6rem;
+  }
+
+  /*.Induce-Speed-textright
+    {
+      
+
+    }*/
+
+  .sticky {
+    position: fixed;
+    width: 100%;
+  }
+
+  .get-started-section {
+    height: 18.75rem;
+  }
+}

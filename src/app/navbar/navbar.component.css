@@ -1,0 +1,60 @@
+.topnav {
+  overflow: hidden;
+  background-color: #cc3743;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.topnav a:hover {
+  background-color: #cc3743;
+  color: white;
+}
+
+.active {
+  background-color: #cc3743;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+}
+
+nav{
+  display:flex;
+  background: #cc3743;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.brand{
+  padding:5px 0px;
+}
+
+.desktop-menu{
+  display: flex;
+}
+
+.menu-item{
+  padding: 5px 0px;
+  margin: 0px 5px;
+  color: #f2f2f2;
+}
+
+.menu-item:hover{
+  color: white;
+  cursor: pointer;
+}

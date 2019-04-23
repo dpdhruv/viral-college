@@ -1,0 +1,79 @@
+      <div class="panel-wrapper">
+      <a href=" " class="viral-logo">Viral</a>
+<!--Left side part/about viral-->
+      <div class="feature-panel feature-panel--enterprise">
+        <div class="enterprise-panel__content">
+        <h2 class="enterprise-panel__header">
+          <small class="enterprise-panel__subheader">
+            Viral Enterprise
+          </small>
+
+							Your unified, scalable workflow—all in one place
+
+        </h2>
+        <p class="enterprise-panel__caption">
+          Empower smarter design. Go to market faster. Spark design-driven innovation.
+        </p>
+        <a href=" " target="_blank" class="enterprise-panel__button">
+          Learn More
+        </a>
+        </div>
+        <div class="enterprise-panel__footer">
+            <p class="enterprise-panel__footer__lead">
+                TRUSTED BY THE WORLD'S SMARTEST COMPANIES
+            </p>
+            <img src="../../assets/images/enterprise-logos.png" class="images/enterprise-panel__logos" />
+        </div>
+      </div>
+<!--Account section/login/sign-up-->
+      <div class="main-panel">
+        <div class="main-panel__table">
+          <div class="main-panel__table-cell">
+            <div class="main-panel__switch">
+                <span class="main-panel__switch__text">
+                    Don't have an account?
+                </span>
+                <a routerLink="/SignUp" class="main-panel__switch__button">
+                  Get Started
+                </a>
+            </div>
+            <div class="main-panel__content">
+                <h1 class="main-panel__heading">
+                    Sign in to Viral.
+                    <small class="main-panel__subheading">
+                      Enter your details below.
+                    </small>
+                </h1>
+  <!--Login form-->
+                <form class="main-panel__form Bizible-Exclude"  #loginForm = "ngForm">
+                  <app-server-error *ngIf="serverError.flag" [serverError]="serverError.message"></app-server-error>
+                  <div class="form-group">
+                    <label for="UserName" class="form__label">UserName</label>
+                    <input id="username" type="text" name="username" #username="ngModel" [class.is-invalid]="username.invalid && username.touched"  class="form__input form-control"  placeholder="John doe" autofocus="" value="" ngModel required>
+                    <!-- <small class="text-danger" [class.display]="username.valid || username.untouched"><sup>*</sup>Username Required</small> -->
+                    <div *ngIf="username.invalid && username.touched">
+                      <small class="text-danger"><sup>*</sup>Please provide a username</small>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password" class="form__label">Password</label>
+                    <input id="password" type="password" class="form__input form-control" name="password" #password="ngModel" [class.is-invalid]="password.invalid && password.touched" placeholder="Enter your password" ngModel required>
+                    <a routerLink = '/forgotpassword' class="form-help">Forgot password?</a>
+                    <div *ngIf="password.invalid && password.touched">
+                      <small class="text-danger"><sup>*</sup>Please provide a password</small>
+                    </div>
+                  </div>
+
+                  <div class="text--center">
+                    <button class="form__button" (click) = "verifyUser(loginForm.value)">
+                      <span *ngIf="loading; else elseBlock">Please wait...</span>
+                      <ng-template #elseBlock><span>Sign In</span></ng-template>
+                    </button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,48 @@
+<div class="add-coupon-container">
+  <div class="form">
+    <div class="form-group">
+      <label>Coupon Code</label>
+      <br>
+      <input type="text" class="form-control" placeholder="Ex COUPON123" name="coupon_code" [class.is-invalid]="coupon_code.invalid && coupon_code.touched" required #coupon_code="ngModel" [(ngModel)]="coupon.coupon_code">
+      <small class="text-danger" *ngIf="coupon_code.invalid && coupon_code.touched">
+        <sup>*</sup>Required
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Coupon Value</label>
+      <br>
+      <input type="text" class="form-control" placeholder="Ex 10%" name="coupon_value" [class.is-invalid]="coupon_value.invalid && coupon_value.touched" #coupon_value="ngModel" required [(ngModel)]="coupon.coupon_value">
+      <small class="text-danger" *ngIf="coupon_value.invalid && coupon_value.touched">
+        <sup>*</sup>Required
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Coupon Message</label>
+      <br>
+      <input type="text" class="form-control" placeholder="Ex Christmas Offer" name="coupon_message"  [class.is-invalid]="coupon_message.invalid && coupon_message.touched" #coupon_message="ngModel" required [(ngModel)]="coupon.coupon_message">
+      <small class="text-danger" *ngIf="coupon_message.invalid && coupon_message.touched">
+        <sup>*</sup>Required
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Milestone:</label>
+      <br>
+      <input type="number" class="form-control" placeholder="Ex 1" name="available_at"
+        [class.is-invalid]="available_at.invalid && available_at.touched" #available_at="ngModel" required
+        [(ngModel)]="coupon.available_at">
+      <small class="text-danger" *ngIf="available_at.invalid && available_at.touched">
+        <sup>*</sup>Required
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Expiry Date:</label>
+      <br>
+      <input type="date" class="form-control" placeholder="Ex 1" name="expiry_date"  required
+        [(ngModel)]="coupon.expiry_date">
+    </div>
+    <div class="form__button" (click)="createCoupon()">
+      <span *ngIf="adding; else elseBlock">Creating...</span>
+      <ng-template #elseBlock><span>Create</span></ng-template>
+    </div>
+  </div>
+</div>

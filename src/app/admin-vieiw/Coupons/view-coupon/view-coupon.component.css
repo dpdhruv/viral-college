@@ -1,0 +1,46 @@
+.admin-loader{
+  position: absolute;
+  left:327px;
+  right: 0;
+  top:0;
+  bottom:0;
+  z-index: 999;
+}
+
+.coupon-container{
+  display:flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  width:90%;
+  padding:40px 0px;
+}
+
+.coupon-card{
+  box-shadow: 0 0 4px #ccc,
+  0 2px 2px #ccc !important;
+  background: #cc3743;
+  color:white;
+  padding: 10px;
+  margin-left: 2%;
+  margin-bottom:2%;
+  max-width: 600px;
+}
+
+.coupon-card-tag{
+  font-weight: bold;
+}
+
+.Loading{
+  position: absolute;
+  z-index:999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: white;
+  color:black;
+}
+
+.edit-form{
+  margin-top:2%;
+}

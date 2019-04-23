@@ -1,0 +1,8 @@
+.server-error{
+      border-radius: 4px;
+      text-align: center;
+      padding: 10px;
+      color:white;
+      background-color: #dc3545;
+      margin-bottom: 4%;
+}

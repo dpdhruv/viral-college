@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default sticky-top" id="landing">
+  <div class="brand">
+    VIRAL BY KIWISPECS
+  </div>
+  <div class="desktop-menu">
+    <div routerLink = '/login' *ngIf="whichPage.isIndexPage" class="menu-item">
+      Login
+    </div>
+    <div routerLink = '/SignUp' *ngIf="whichPage.isIndexPage" class="menu-item">
+      SignUp
+    </div>
+    <div *ngIf="whichPage.isReferralPage" class="menu-item">
+      <i class="fa fa-user"></i>
+      &nbsp;
+      <span>{{Username}}</span>
+    </div>
+    <div (click)="Logout()" *ngIf="whichPage.isReferralPage" class="menu-item">
+      Logout
+    </div>
+  </div>
+</nav>

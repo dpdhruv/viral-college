@@ -1,0 +1,53 @@
+.redeem-form-container{
+  padding: 80px 0px;
+}
+.form{
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+}
+
+.inputs{
+  display:flex;
+  justify-content: center;
+}
+
+.form-group{
+  padding: 0px 10px;
+}
+
+input{
+  border:1px solid #000000;
+  padding: 10px 10px;
+  box-shadow: none;
+}
+
+input:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.form__button {
+  display: inline-block;
+  margin: 1.25rem auto;
+  background: #cc3743;
+  border-radius: 6.25rem;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 3.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  cursor: pointer;
+  -webkit-transition: border .2s ease, -webkit-box-shadow .2s ease;
+  -o-transition: box-shadow .2s ease, border .2s ease;
+  transition: box-shadow .2s ease, border .2s ease;
+  transition: box-shadow .2s ease, border .2s ease, -webkit-box-shadow .2s ease;
+}
+
+.form__button:focus,
+.form__button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, .25);
+  box-shadow: 0 0.2rem 0.9rem 0 rgba(0, 0, 0, .25);
+}

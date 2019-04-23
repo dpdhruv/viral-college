@@ -1,0 +1,16 @@
+<div class="redeem-form-container">
+  <form class="form" #redeem="ngForm">
+    <div class="inputs">
+      <div class="form-group">
+        <input type="text" name="coupon" placeholder="Coupon Id" class="form-cotrol" [(ngModel)]="redeemValue.coupon">
+      </div>
+      <div class="form-group">
+        <input type="text" name="user" placeholder="Username" class="form-cotrol" [(ngModel)]="redeemValue.user">
+      </div>
+    </div>
+    <div class="form__button" (click)="redeemCoupon()">
+      <span *ngIf="loading; else elseBlock">Checking...</span>
+      <ng-template #elseBlock><span>Redeem</span></ng-template>
+    </div>
+  </form>
+</div>

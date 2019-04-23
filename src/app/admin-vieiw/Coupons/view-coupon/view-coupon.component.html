@@ -1,0 +1,57 @@
+<app-admin-loader *ngIf="loading" class="admin-loader"></app-admin-loader>
+<div class="coupon-container">
+    <div class="coupon-card" *ngFor="let coupon of coupons;let i=index;">
+      <div style="display:flex;">
+        <div class="badge badge-warning" style="cursor:pointer" (click)="edit(i)">Edit</div>
+        <!-- <div class="badge badge-warning" style="margin-left:auto;cursor:pointer" (click)="delete(i)">Delete</div> -->
+      </div>
+
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Coupon Code:&nbsp;{{coupon.code}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Coupon Code:</label><br>
+          <input type="text" name="code" [(ngModel)]="coupon_edit.code">
+        </div>
+      </div>
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Coupon Value:&nbsp;{{coupon.coupon_value}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Coupon Value:</label><br>
+          <input type="text" name="coupon_value" [(ngModel)]="coupon_edit.coupon_value">
+        </div>
+      </div>
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Coupon Message:&nbsp;{{coupon.coupon_message}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Coupon Code:</label><br>
+          <input type="text" name="coupon_message" [(ngModel)]="coupon_edit.coupon_message">
+        </div>
+      </div>
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Coupon Status:&nbsp;{{coupon.status}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Coupon Code:</label><br>
+          <select id="status" name="status" [(ngModel)]="coupon_edit.status">
+            <option>active</option>
+            <option>expired</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Milestone:&nbsp;{{coupon.available_at}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Milestone:</label><br>
+          <input type="text" name="available_at" [(ngModel)]="coupon_edit.available_at">
+        </div>
+      </div>
+      <div>
+        <p *ngIf="!showEditForm[i]" class="coupon-card-tag">Expires on:&nbsp;{{coupon.expiry_date| date:'mediumDate'}}</p>
+        <div *ngIf="showEditForm[i]" class="edit-form">
+          <label class="coupon-card-tag">Expires on:</label><br>
+          <input type="date" name="expiry_date" [(ngModel)]="coupon_edit.expiry_date">
+          <br><br>
+          <button (click)="upadateCoupon()" class="btn btn-block btn-info">Save</button>
+        </div>
+      </div>
+    </div>
+</div>

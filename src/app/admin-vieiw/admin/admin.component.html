@@ -1,0 +1,32 @@
+<div class="admin">
+  <div class="side-nav">
+    <div class="admin-menu">
+      <div [routerLink]="['/admin/home']" class="menu-item">
+        Home
+      </div>
+      <div (click)="show.coupon=!show.coupon" class="menu-item">
+        Coupons
+      </div>
+            <div *ngIf="show.coupon" class="sub-menu">
+              <div [routerLink]="['/admin/coupons/add']" class="sub-menu-item">
+                Add
+              </div>
+              <div [routerLink]="['/admin/coupons/view']"  class="sub-menu-item">
+                View
+              </div>
+      </div>
+      <div class="menu-item">
+        Campaigns
+      </div>
+      <div [routerLink]="['/admin/analytics']" class="menu-item">
+        Analytics
+      </div>
+      <div class="menu-item">
+        Settings
+      </div>
+    </div>
+  </div>
+  <div class="side-space">
+    <router-outlet></router-outlet>
+  </div>
+</div>
